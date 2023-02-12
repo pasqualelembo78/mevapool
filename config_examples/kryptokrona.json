@@ -10,7 +10,7 @@
     "transactionExplorer": "https://explorer.kryptokrona.se/transaction.html?hash={id}",
 
     "daemonType": "bytecoin",
-    "cnAlgorithm": "cryptonight-turtle",
+    "cnAlgorithm": "cryptonight_pico",
     "cnVariant": 2,
     "cnBlobType": 2,
 

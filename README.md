@@ -1,4 +1,4 @@
-cryptonote-nodejs-pool
+kryptokrona-nodejs-pool
 ======================
 
 High performance Node.js (with native C addons) mining pool for CryptoNote based coins. Comes with lightweight example front-end script which uses the pool's AJAX API. Support for Cryptonight (Original, Monero v7, Stellite v7), Cryptonight Light (Original, Aeon v7, IPBC) Cryptonight Fast (Electronero/Crystaleum), and Cryptonight Heavy (Sumokoin) algorithms.
@@ -97,10 +97,10 @@ Usage
 
 #### Requirements
 * Coin daemon(s) (find the coin's repo and build latest version from source)
-* [Node.js](http://nodejs.org/) v11.0+
+* [Node.js](http://nodejs.org/) v12.0+
   * For Ubuntu: 
  ```
-  curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash
+  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
   sudo apt-get install -y nodejs
  ```
   * Or use NVM(https://github.com/creationix/nvm) for debian/ubuntu.
@@ -154,15 +154,15 @@ sudo su - your-user
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/dvandal/cryptonote-nodejs-pool.git pool
-cd pool
+git clone https://github.com/kryptokrona/kryptokrona-nodejs-pool.git pool
+cd kryptokrona-nodejs-pool
 
-npm update
+npm i
 ```
 
 #### 2) Configuration
 
-Copy the `config_examples/COIN.json` file of your choice to `config.json` then overview each options and change any to match your preferred setup.
+Copy the `config_examples/kryptokrona.json` file to `config.json` then overview each options and change any to match your preferred setup.
 
 Explanation for each field:
 ```javascript

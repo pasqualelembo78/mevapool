@@ -1,7 +1,7 @@
-var parentCoin = "COIN";
+var parentCoin = "mevacoin";
 
-var api = "http://poolhost:8117";
-var poolHost = "poolhost.com";
+var api = "https://www.melatv.it:8119";
+var poolHost = "melatv.it";
 
 var email = "support@poolhost.com";
 var telegram = "https://t.me/YourPool";

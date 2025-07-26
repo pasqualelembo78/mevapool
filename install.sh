@@ -3,10 +3,13 @@
 # Aggiorna sistema e installa pacchetti richiesti
 apt update && apt upgrade -y
 apt install -y curl git build-essential redis-server ufw apache2 certbot python3-certbot-apache
-
+sudo apt install -y nodejs npm
 # Installa Node.js LTS
-curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
-apt install -y nodejs
+
+sudo npm install -g n
+
+sudo n 16
+
 
 # Verifica installazione
 node -v

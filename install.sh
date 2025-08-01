@@ -44,6 +44,7 @@ git clone "$REPO_URL" "$APP_DIR"
 # Installa dipendenze Node.js
 cd "$APP_DIR" || exit 1
 npm install
+npm install dateformat
 
 # Crea directory del sito web
 mkdir -p /var/www/melatv.it/html

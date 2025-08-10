@@ -6,9 +6,9 @@ apt install -y curl git build-essential redis-server ufw apache2 certbot python3
 sudo apt install -y nodejs npm
 # Installa Node.js LTS
 
-sudo npm install -g n
+# sudo npm install -g n
 
-sudo n 16
+# sudo n 16
 
 
 # Verifica installazione

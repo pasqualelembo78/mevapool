@@ -9,9 +9,9 @@ sudo apt install -y build-essential cmake python3 g++ make \
 
 # Installa Node.js LTS
 
-# sudo npm install -g n
+sudo npm install -g n
 
-# sudo n 16
+sudo n 16
 
 
 # Verifica installazione

@@ -4,6 +4,9 @@
 apt update && apt upgrade -y
 apt install -y curl git build-essential redis-server ufw apache2 certbot python3-certbot-apache
 sudo apt install -y nodejs npm
+sudo apt install -y build-essential cmake python3 g++ make \
+    libboost-all-dev libsodium-dev
+
 # Installa Node.js LTS
 
 # sudo npm install -g n

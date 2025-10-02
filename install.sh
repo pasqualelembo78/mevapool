@@ -8,11 +8,8 @@ sudo apt install -y build-essential cmake python3 g++ make \
     libboost-all-dev libsodium-dev
 
 # Installa Node.js LTS
-
 sudo npm install -g n
-
 sudo n 16
-
 
 # Verifica installazione
 node -v
@@ -58,7 +55,8 @@ chown -R www-data:www-data /var/www/melatv.it
 cat > /etc/apache2/sites-available/melatv.it.conf <<EOF
 <VirtualHost *:80>
     ServerAdmin webmaster@melatv.it
-    ServerName www.melatv.it
+    ServerName melatv.it
+    ServerAlias www.melatv.it
     DocumentRoot /var/www/melatv.it/html
     ErrorLog \${APACHE_LOG_DIR}/melatv.it_error.log
     CustomLog \${APACHE_LOG_DIR}/melatv.it_access.log combined
@@ -70,16 +68,8 @@ a2ensite melatv.it.conf
 a2enmod rewrite
 systemctl reload apache2
 
-# Ottieni certificato HTTPS con Let's Encrypt
-certbot --apache -d www.melatv.it --non-interactive --agree-tos -m support@melatv.it
-
-# Crea directory SSL pool
-mkdir -p /var/www/melatv.it/ssl
-
-# Copia certificati in posizione richiesta
-cp /etc/letsencrypt/live/www.melatv.it/cert.pem     /var/www/melatv.it/ssl/cert.pem
-cp /etc/letsencrypt/live/www.melatv.it/privkey.pem  /var/www/melatv.it/ssl/privkey.pem
-cp /etc/letsencrypt/live/www.melatv.it/chain.pem    /var/www/melatv.it/ssl/chain.pem
+# Ottieni certificato HTTPS con Let's Encrypt per entrambi i domini
+certbot --apache -d melatv.it -d www.melatv.it --non-interactive --agree-tos -m support@melatv.it
 
 # Crea servizio systemd per il mining pool
 cat > /etc/systemd/system/mevapool.service <<EOF
